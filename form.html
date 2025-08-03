@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced HTML5 Content & Mastering Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    header, main, footer {
+      margin-bottom: 2em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+    }
+    fieldset {
+      margin-bottom: 1.5em;
+      border: 1px solid white;
+      padding: 1em;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.4em;
+      margin-top: 0.3em;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 0.6em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    img, video, audio {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Enhancing HTML5 Content & Mastering Forms</h1>
+  <p>This page demonstrates use of lists, tables, media, and a fully validated HTML5 form.</p>
+</header>
+
+<main>
+  
+  <section>
+    <h2>Organizing Content with Lists</h2>
+    <p>Here are some examples of HTML5 list usage:</p>
+    <h3>Unordered List</h3>
+    <ul>
+      <li>HTML5 Semantic Elements</li>
+      <li>Form Validation with Native HTML5 Attributes</li>
+      <li>Embedding Media</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+      <li>Plan your content structure</li>
+      <li>Use semantic tags</li>
+      <li>Validate user input with HTML5</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Presenting Data with Tables</h2>
+    <p>Example of a simple information table:</p>
+    <table>
+      <caption>HTML5 Input Types Overview</caption>
+      <thead>
+        <tr>
+          <th>Input Type</th>
+          <th>Description</th>
+          <th>Validation Feature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>email</td>
+          <td>Capture user email addresses</td>
+          <td>Auto validation for email format</td>
+        </tr>
+        <tr>
+          <td>number</td>
+          <td>Numeric input with min/max</td>
+          <td>Limits input range</td>
+        </tr>
+        <tr>
+          <td>url</td>
+          <td>Web addresses</td>
+          <td>Validates URL format</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Embedding Media</h2>
+    
+    <figure>
+      <img src="https://via.placeholder.com/600x300.png?text=Sample+Image" alt="Sample placeholder image" />
+      <figcaption>Example Image: Placeholder for media content</figcaption>
+    </figure>
+    
+    <figure>
+      <video controls width="600" preload="metadata">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+      <figcaption>Example Video: Flower blooming</figcaption>
+    </figure>
+    
+    <figure>
+      <audio controls preload="none">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Example Audio: Dinosaur roar</figcaption>
+    </figure>
+    
+  </section>
+
+  <section>
+    <h2>Complete HTML5 Form</h2>
+    <form action="#" method="post" autocomplete="on" novalidate>
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" minlength="3" required autocomplete="name" />
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX" pattern="^\+254\s7\d{2}\s\d{3}\s\d{3}$" autocomplete="tel" />
+        
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required max="2005-12-31" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" minlength="5" maxlength="15" required autocomplete="username" />
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required autocomplete="new-password" />
+
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat your password" minlength="8" required autocomplete="new-password" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label for="color">Favorite Color</label>
+        <input type="color" id="color" name="color" value="#0000ff" />
+
+        <label for="range">Select a Rating (1 to 5)</label>
+        <input type="range" id="range" name="range" min="1" max="5" value="3" />
+
+        <label for="website">Website URL</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com" autocomplete="url" />
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself"></textarea>
+
+        <label for="country">Select Your Country *</label>
+        <select id="country" name="country" required>
+          <option value="">-- Please Choose --</option>
+          <option value="kenya">Kenya</option>
+          <option value="uganda">Uganda</option>
+          <option value="tanzania">Tanzania</option>
+          <option value="rwanda">Rwanda</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Subscription</legend>
+        <label>
+          <input type="checkbox" name="newsletter" value="yes" />
+          Subscribe to newsletter
+        </label>
+
+        <p>Choose your preferred contact method:</p>
+        <label>
+          <input type="radio" name="contact" value="email" required />
+          Email
+        </label>
+        <label>
+          <input type="radio" name="contact" value="phone" />
+          Phone
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Enhanced HTML5 Content & Forms Assignment</p>
+</footer>
+
+</body>
+</html>
